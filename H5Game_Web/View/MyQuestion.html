@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>我的题目-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="bgcolor">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">我的题目</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main class="myQue"> 
+            <section class="myQueNav">
+                <div class="title" id="title">
+                    <span id="examListNav" onclick="showDiffPanel(this)" class="defaultList currentList ">
+                        <span class="statusImg"><img src="../Imgs/exam.png" class="animationRotate" /></span>审核中
+                    </span>
+                    <span class="splitLine"></span>
+                    <span id="passListNav" onclick="showDiffPanel(this)" class="defaultList ">
+                        <span class="statusImg"><img src="../Imgs/pass.png" class="animationRotate" /></span>已通过
+                    </span>
+                    <span class="splitLine"></span>
+                    <span id="failListNav" onclick="showDiffPanel(this)" class="defaultList ">
+                        <span class="statusImg"><img src="../Imgs/fail.png" class="animationRotate" /></span>未通过
+                    </span>
+                </div>
+            </section>
+            <div style="width:100%;"><div class="myQueLine myQueGradient"></div></div>
+            <div class="content">
+                <section class="quesDiv" id="examList">
+                    <a href="../View/SetQuesition.html" class="goSetQueDiv blackBoxShadow animationFlip">
+                        <div class="goSetQueDiv setQueBtn">
+                            <div id="setQRs"></div>
+                            <div class="goSetQue blackBoxShadow">我要出题</div>
+                        </div>
+                    </a>
+                    <a href="../View/QuesitionPage.html?status=exam" class="goSetQueDiv blackBoxShadow animationFlip">
+                        <div class="queStatusDiv">
+                            <div class="status">
+                                <span class="statusImg"><img src="../Imgs/exam.png" /></span>
+                                <span>审核中</span>
+                            </div>
+                            <div class="quesCont clearFloat">
+                                <div class="quesDetails">
+                                    出题内容出题内容出题内容
+                                </div>
+                                <div class="type"><span class="mainType">生活</span><span class="splitLine"></span><span class="subType">常识</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+                <section class="quesDiv" id="passList">
+                    <div class="goSetQueDiv blackBoxShadow animationFlip">
+                        <div class="goSetQueDiv ">
+                            <div class="examRs">您还没有题目被采纳</div>
+                        </div>
+                    </div>
+                    <a href="../View/QuesitionPage.html?status=pass" class="goSetQueDiv blackBoxShadow animationFlip">
+                        <div class="queStatusDiv ">
+                            <div class="status">
+                                <span class="statusImg"><img src="../Imgs/pass.png" /></span>
+                                <span>已通过</span>
+                            </div>
+                            <div class="quesCont clearFloat">
+                                <div class="quesDetails">
+                                    出题内容出题内容出题内容
+                                </div>
+                                <div class="type"><span class="mainType">娱乐</span><span class="splitLine"></span><span class="subType">电影</span></div>
+                            </div>
+                        </div>
+                    </a> 
+                </section>
+                <section class="quesDiv" id="failList">
+                    <div class="goSetQueDiv blackBoxShadow animationFlip">
+                        <div class="goSetQueDiv ">
+                            <div class="examRs">没有数据</div>
+                        </div>
+                    </div>
+                    <a href="../View/QuesitionPage.html?status=fail" class="goSetQueDiv blackBoxShadow animationFlip">
+                        <div class="queStatusDiv ">
+                            <div class="status">
+                                <span class="statusImg"><img src="../Imgs/fail.png" /></span>
+                                <span>未通过</span>
+                            </div>
+                            <div class="quesCont clearFloat">
+                                <div class="quesDetails">
+                                    出题内容出题内容出题内容
+                                </div>
+                                <div class="type"><span class="mainType">娱乐</span><span class="splitLine"></span><span class="subType">电视剧</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

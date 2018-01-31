@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>排行榜-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="clearFloat bgcolor" id="header">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">排行榜</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main>
+            <div class="fixedTop radiusTop"></div>
+            <section class="listContainer" id="listContainer">
+                <div class="title animationZoomIn" id="title">
+                    <span id="friendList" onclick="showDiffPanel(this)" class="friendList currentList animationRotate">好友排行</span>
+                    <span class="splitLine"></span>
+                    <span id="worldList" onclick="showDiffPanel(this)" class="worldList animationRotate">世界排行</span>
+                </div>
+                <div class="title" id="preTitle">上一赛季英雄榜</div>
+            </section>
+            <div style="width:100%;"><div class="listLine listGradient"></div></div>
+            <div class="content" style="overflow:hidden;height:3.8rem;" id="ListContent">
+                <section class="listDiv" id="competList">
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient clearFloat">
+                            <div class="levelNum animationRotate"><i>1</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u1.jpg" /></div>
+                            </div>
+                            <label>周易</label>
+                            <label class="uAddr"><span>来自：<span>深圳</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>2</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/uimg.jpg" /></div>
+                            </div>
+                            <label>我</label>
+                            <label class="uAddr"><span>来自：<span>深圳</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>3</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u3.jpg" /></div>
+                            </div>
+                            <label>何珥</label>
+                            <label class="uAddr"><span>来自：<span>武汉</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>4</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u2.jpg" /></div>
+                            </div>
+                            <label>周飒</label>
+                            <label class="uAddr"><span>来自：<span>成都</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>5</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u3.jpg" /></div>
+                            </div>
+                            <label>王舞</label>
+                            <label class="uAddr"><span>来自：<span>广州</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+                <section class="listDiv" id="preCompetList">
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient clearFloat">
+                            <div class="levelNum animationRotate"><i>1</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/uimg.jpg" /></div>
+                            </div>
+                            <label>张怡</label>
+                            <label class="uAddr"><span>来自：<span>北京</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>2</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u1.jpg" /></div>
+                            </div>
+                            <label>胡迩</label>
+                            <label class="uAddr"><span>来自：<span>深圳</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>3</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u2.jpg" /></div>
+                            </div>
+                            <label>孙萨蛮</label>
+                            <label class="uAddr"><span>来自：<span>上海</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>4</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u1.jpg" /></div>
+                            </div>
+                            <label>郑思雨</label>
+                            <label class="uAddr"><span>来自：<span>西安</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/UserInfo.html" class="levelPanel animationFlip">
+                        <div class="listBgGradient">
+                            <div class="levelNum animationRotate"><i>5</i></div>
+                            <div class="orderBg">
+                                <div class="userImg"><img src="../Imgs/u3.jpg" /></div>
+                            </div>
+                            <label>苗武宇</label>
+                            <label class="uAddr"><span>来自：<span>昆明</span></span></label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span>入门新手</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                                <div class="starDiv starLevel">0</div>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="fixedBottom radiusTop"></div>
+            <div style="width:100%;">
+                <div class="listLine listGradient bottomLine"></div>
+            </div>
+            <div id="footListDiv">
+                <div class="bottomNav" id="footer">
+                    <div class="orderBg animationRubberBand"><img src="../Imgs/king.png" class="kingImg" /></div>
+                    <div class="preCompetition animationRubberBand" onclick="showDiffPanel(this)" id="preCompet">查看上赛季英雄榜</div>
+                </div>
+            </div>
+            <div id="footPreListDiv" class="animationLeft">
+                <a href="javascript:window.location.href='../View/ListPanel.html'" class="goList">返回</a>
+            </div>
+        </footer>
+    </div>
+    <input type="hidden" value="listPanle" id="hideList"/>
+</body>
+</html>
+<script> 
+    
+</script>

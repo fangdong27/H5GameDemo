@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>知识进化-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--设置遮罩层-->
+        <div id="hideBg"></div>
+        <header class="bgcolor" id="header">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">知识进化</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main class="konwledgePage">
+            <div class="knowledgeDiv knowledgeBgColorWK animationRight">
+                <div class="konwledgeLogo animationLeft">
+                    <div class="logoDiv"><img src="../Imgs/wk.png"/></div>
+                    <div class="logoText">文科</div>
+                </div>
+                <div class="konwledgeType">
+                    <div class="subContainer animationFadeInUp">
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WK_yw">
+                            <span class="subText knowledgeColorWK">语文</span>
+                            <div class="logo knowledgeBgColorWK"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WK_wy">
+                            <span class="subText knowledgeColorWK">外语</span>
+                            <div class="logo knowledgeBgColorWK"></div>
+                            <span class="subLevel">LV.2</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WK_ls">
+                            <span class="subText knowledgeColorWK">历史</span>
+                            <div class="logo knowledgeBgColorWK"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WK_jj">
+                            <span class="subText knowledgeColorWK">经济</span>
+                            <div class="logo knowledgeBgColorWK"></div>
+                            <span class="subLevel">LV.2</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WK_js">
+                            <span class="subText knowledgeColorWK">军事</span>
+                            <div class="logo knowledgeBgColorWK"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="knowledgeDiv knowledgeBgColorLX animationLeft">
+                <div class="konwledgeLogo animationRight">
+                    <div class="logoDiv"><img src="../Imgs/lx.png" /></div>
+                    <div class="logoText">流行</div>
+                </div>
+                <div class="konwledgeType">
+                    <div class="subContainer animationFadeInDown">
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="LX_yw">
+                            <span class="subText knowledgeColorLX">名人</span>
+                            <div class="logo knowledgeBgColorLX"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="LX_wy">
+                            <span class="subText knowledgeColorLX">时尚</span>
+                            <div class="logo knowledgeBgColorLX"></div>
+                            <span class="subLevel">LV.2</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="LX_ls">
+                            <span class="subText knowledgeColorLX">体育</span>
+                            <div class="logo knowledgeBgColorLX"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="LX_jj">
+                            <span class="subText knowledgeColorLX">科技</span>
+                            <div class="logo knowledgeBgColorLX"></div>
+                            <span class="subLevel">LV.2</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="LX_js">
+                            <span class="subText knowledgeColorLX">商业</span>
+                            <div class="logo knowledgeBgColorLX"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="knowledgeDiv knowledgeBgColorWY animationFadeInDown">
+                <div class="konwledgeLogo animationFadeInUp">
+                    <div class="logoDiv"><img src="../Imgs/wy.png" /></div>
+                    <div class="logoText">文艺</div>
+                </div>
+                <div class="konwledgeType">
+                    <div class="subContainer animationRight">
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WY_yw">
+                            <span class="subText knowledgeColorWY">文化</span>
+                            <div class="logo knowledgeBgColorWY"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WY_wy">
+                            <span class="subText knowledgeColorWY">文学</span>
+                            <div class="logo knowledgeBgColorWY"></div>
+                            <span class="subLevel">LV.2</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WY_ls">
+                            <span class="subText knowledgeColorWY">演艺</span>
+                            <div class="logo knowledgeBgColorWY"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WY_jj">
+                            <span class="subText knowledgeColorWY">艺术</span>
+                            <div class="logo knowledgeBgColorWY"></div>
+                            <span class="subLevel">LV.2</span>
+                        </div>
+                        <div class="subLogoDiv" onclick="showKnowledgePro(this)" id="WY_js">
+                            <span class="subText knowledgeColorWY">设计</span>
+                            <div class="logo knowledgeBgColorWY"></div>
+                            <span class="subLevel">LV.1</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </main>
+        <section id="KnowledgePanel">
+            <div class="knowledgeIntro animationFlip">
+                <span class="setImg"><img src="../Imgs/wk.png" /></span>
+                <span class="close" onclick="ClosePanel('KnowledgePanel')">X</span>
+                <div class="winProName">小宝箱</div>
+                <div class="proLevel"></div>
+                <div class="proIntro">使用该宝物可在该宝物所属科目的答题成功时的基础上增加得分！</div>
+                <div class="useBtn" onclick="javascript: alert('升级成功，快去答题吧！'); window.location.href = '../View/OrderPanel.html'">升级</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+<script>
+    var type = "WK";
+    console.log(type.toLocaleLowerCase());
+</script>

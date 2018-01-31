@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>我要出题-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--设置遮罩层-->
+        <div id="hideBg"></div>
+        <header class="bgcolor" id="header">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">我要出题</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main class="qPage">
+            <div class="qType animationLeft" id="qType"><span class="mainType">生活</span><span class="splitLine"></span><span class="subType">常识</span></div>
+            <form>
+                <div class="qContent">
+                    <div class="question animationRight">
+                        <textarea placeholder="请输入问题" id="qContent"></textarea>
+                    </div>
+                    <div class="answer">
+                        <div class="animationFadeInDown"><span class="trueMark"></span><input type="text" class="trueA" placeholder="填写正确答案" id="trueA" /></div>
+                        <div class="animationRight">
+                            <span class="falseMark"><span class="splitLineL"></span><span class="splitLineR rotateBox"></span></span>
+                            <input type="text" class="falseA" placeholder="填写错误答案" id="falseA1" />
+                        </div>
+                        <div class="animationLeft">
+                            <span class="falseMark"><span class="splitLineL"></span><span class="splitLineR rotateBox"></span></span>
+                            <input type="text" class="falseA" placeholder="填写错误答案" id="falseA2" />
+                        </div>
+                        <div class="animationFadeInUp">
+                            <span class="falseMark"><span class="splitLineL"></span><span class="splitLineR rotateBox"></span></span>
+                            <input type="text" class="falseA" placeholder="填写错误答案" id="falseA3" />
+                        </div>
+                    </div>
+                </div>
+                <div id="submitBtn">
+                    <div class="submit animationReduce" onclick="checkData()">提交</div>
+                </div>
+            </form>
+        </main>
+        <div id="CheckDiv">
+            <span class="circleBg" onclick="ClosePanel('CheckDiv')"><span class="closeDiv"><span class="splitLineL"></span><span class="splitLineR rotateBox"></span></span></span>
+            <div class="checkSubmit" onclick="submitQuestion()">确认提交</div>
+            <div class="words">提交后不可修改</div>
+        </div>
+        <div id="result">
+            <div class="result">
+                <div class="submitRs">提交成功</div>
+                <div class="explain">感谢您的支持，请等待审核。</div>
+                <div class="splitLine"></div>
+                <a href="javascript:$('#result').hide();window.location.href = '../View/MyQuestion.html'" class="operate">确定</a>
+            </div>
+        </div>
+        <div id="status">
+            <div class="statusBg statusBgGradient lightBlueShadowT">审核中</div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var url = window.location;
+    $(function () {
+        var status = getUrlParam(url, 'status');
+        if (status != null) {
+            $("#status").show();
+            $("#submitBtn").hide();
+            $("#header span.title").text('我要审题');
+            switch (status) {
+                case "exam":
+                    $("#status div").text("审核中");
+                    break;
+                case "pass":
+                    $("#status div").text("已通过");
+                    break;
+                case "fail":
+                    $("#status div").text("未通过");
+                    break;
+            }
+        }
+        //alert(status);
+    })
+    
+    
+</script>

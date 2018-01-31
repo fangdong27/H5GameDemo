@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>个人技能点-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../eCharts/esl.js"></script>
+    <script type="text/javascript" src="../eCharts/zrender/zrender.js"></script>
+    <script type="text/javascript" src="../eCharts/zrender/config.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="clearFloat bgcolor">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">技能点解析图</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main>
+            <div class="fixedTop pkTop"></div>
+            <div class="content pkContent">
+                <section class="pkDiv">
+                    <div class="mySkillDiv animationFlip">
+                        <!--<div class="chartBg"></div>-->
+                        <div class="" id="mySkill"></div>
+                    </div>
+                    <div class="personInfo">
+                        <div class="mySkillInfo">
+                            <div class="ubg clearFloat animationFadeInUp">
+                                <span class="userInfo left">用户ID：<span>20180001</span></span>&nbsp;|&nbsp;<span class="userInfo right">等级：<span>入门新手</span></span>
+                            </div>
+                            <div class="ubg clearFloat animationFadeInDown">
+                                <span class="userInfo left">胜率：<span class="ulevel">50%</span></span>&nbsp;|&nbsp;<span class="userInfo right">总场次：<span>2</span></span>
+                            </div>
+                            <div class="ubg clearFloat animationFlip">
+                                <span class="userInfo left">经验：<span class="ulevel">0/3</span></span>&nbsp;|&nbsp;<span class="userInfo right">胜场：<span>1</span></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <div class="pkFooter">
+                    <div class="share">
+                        <span class="shareCont animationPlus">
+                            <span class="arrow"></span>
+                            <span class="line"></span>
+                        </span>
+                    </div>
+                    <span class="shareWords">分享到其他群，继续查看排行榜</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../eCharts/echarts_old.js"></script>
+<script type="text/javascript" src="../JS/drawCharts.js"></script>
+<script>
+    require.config({
+        packages: [
+               {
+                   name: 'echarts',
+                   location: '/eCharts',
+                   main: 'echarts'
+               },
+               {
+                   name: 'zrender',
+                   //location: 'http://ecomfe.github.io/zrender/src',
+                   location: '../eCharts/zrender/src',
+                   main: 'zrender'
+               }
+        ]
+    });
+
+    //动态加载echarts，在回掉函数中使用，要注意保持按需加载结构定义图表路径
+    require(
+            [
+                'echarts',//来源于packages设置的location
+                'echarts/chart/radar',
+            ],
+                //DrawCharts
+                DrawRadarUserEChart
+        )
+
+</script>

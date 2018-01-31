@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>排位赛-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div class="fixedTop" id="header"></div>
+        <header class="clearFloat bgcolor">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">排位赛</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main>
+            <div class="orderTop animationFadeInDown"></div>
+            <section class="orderContainer animationFadeInDown">
+                <div class="title">
+                    <span class="help" onclick="javascript: window.location.href = '../View/CompetitionIntro.html'">?</span>
+                    <span class="mark">s.1</span><span class="strong">测试</span>赛季
+                </div>
+                <div class="infoLevel">
+                    <span class="level">Lv.2<span class="levelProgress"><i style="width:0.2rem;"></i></span></span>
+                    <span class="score"><span class="scoreMark"><img src="../Imgs/score.png" /></span><span class="sNum">1000</span></span>
+                </div>
+            </section>
+            <div style="width:100%;"><div class="orderLine orderGradient animationLeft"></div></div> 
+            <div class="content orderContent">
+                <section class="levelPanel">
+                    <a href="../View/PKPanel.html" class="levelPanel animationRight">
+                        <div class="bgGradient">
+                            <div class="orderBg firstGradient">
+                                <div class="levelImg"><img src="../Imgs/f.png" /></div>
+                            </div>
+                            <label>一级</label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span class="scoreMark"><img src="../Imgs/score.png" /></span><span class="sNum">20</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small starAct"></span></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="../View/PKPanel.html" class="levelPanel animationLeft">
+                        <div class="bgGradient">
+                            <div class="orderBg firstGradient">
+                                <div class="levelImg"><img src="../Imgs/s.png" /></div>
+                            </div>
+                            <label>二级</label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span class="scoreMark"><img src="../Imgs/score.png" /></span><span class="sNum">50</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small"></span></div>
+                                <div class="starDiv"><span class="star small"></span></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="levelPanel animationRight">
+                        <div class="bgGradient">
+                            <div class="orderBg firstGradient">
+                                <div class="levelImg"><img src="../Imgs/t.png" /></div>
+                            </div>
+                            <label>三级</label>
+                            <span class="underLine"></span>
+                            <span class="levelScore"><span class="scoreMark"><img src="../Imgs/score.png" /></span><span class="sNum">70</span></span>
+                            <div id="starMark" class="clearFloat">
+                                <div class="starDiv"><span class="star small"></span></div>
+                                <div class="starDiv"><span class="star small"></span></div>
+                                <div class="starDiv"><span class="star small"></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+            </div>
+            <div class="lockLevel animationFadeInUp" id="maskLayer">
+                <div class="lock">
+                    <div class="lockTop lightBlueShadow"></div>
+                    <div class="lockBottom lightBlueShadow"></div>
+                    <div class="lockMiddle"><span class="lockS"></span></div>
+                </div>
+                <div class="circle lightBlueShadow"></div>
+                <div class="circle lightBlueShadow"></div>
+                <div class="circle lightBlueShadow"></div>
+                <div class="more lightBlueShadowT">?</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>百宝箱-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--设置遮罩层-->
+        <div id="hideBg"></div>
+        <div class="fixedTop"></div>
+        <header class="clearFloat gradient">
+            <div class="top " id="header">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">百宝箱</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main class="winPro">
+            <div class="content">
+                <section class="storeDiv animationZoomIn">
+                     <div style="text-align:center;overflow:hidden;" id="StoreProDiv">
+                        <div class="subjectType">
+                            <div class="subDiv animationLeft" onclick="showBuyPanel(this)" id="sMoney">
+                                <div class="subWords">少量王者币</div>
+                                <div class="subImg"><img src="../Imgs/smoney.png" /></div>
+                                <div class="proMoney">￥6</div>
+                            </div>
+                            <div class="subDiv animationRight" onclick="showBuyPanel(this)" id="lMoney">
+                                <div class="subWords">大量王者币</div>
+                                <div class="subImg"><img src="../Imgs/lmoney.png" /></div>
+                                <div class="proMoney">￥32</div>
+                            </div>
+                            <div class="subDiv animationLeft" onclick="showBuyPanel(this)" id="lBox">
+                                <div class="subWords">王者币宝箱</div>
+                                <div class="subImg"><img src="../Imgs/kingBox.png" /></div>
+                                <div class="proMoney">￥45</div>
+                            </div>
+                            <div class="subDiv animationRight" onclick="showBuyPanel(this)" id="lBox">
+                                <div class="subWords">小宝箱</div>
+                                <div class="subImg"><img src="../Imgs/sBox.png" /></div>
+                                <div class="proMoney">￥8</div>
+                            </div>
+                            <div class="subDiv animationLeft" onclick="showBuyPanel(this)" id="lBox">
+                                <div class="subWords">中宝箱</div>
+                                <div class="subImg"><img src="../Imgs/mBox.png" /></div>
+                                <div class="proMoney">￥16</div>
+                            </div>
+                            <div class="subDiv animationRight" onclick="showBuyPanel(this)" id="lBox">
+                                <div class="subWords">大宝箱</div>
+                                <div class="subImg"><img src="../Imgs/lBox.png" /></div>
+                                <div class="proMoney">￥27</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <section id="BuyProDiv">
+            <div style="text-align:center;" class="animationFlip">
+                <span class="setImg subImg"><img src="../Imgs/sBox.png" /></span>
+                <div class="winProName">小宝箱</div>
+                <div class="proIntro">宝物使用说明</div>
+                <div class="useBtn closeBtn" onclick="ClosePanel('BuyProDiv')">取消</div>
+                <div class="useBtn" onclick="javascript: alert('购买成功，祝您好运！'); window.location.href = '../View/OrderPanel.html'">购买</div>
+
+            </div>
+        </section>  
+        <div class="storefixedBottom gradient bottomLine" id="footer">
+        </div>
+        <div class="forFree animationZoomInR">
+            <div class="forFreeBtn"><img src="../Imgs/score.png" onclick="javascript: alert('分享到微信群，可获得140个王者币！');" /><span>免费王者币</span></div>
+            <div class="shareText"><span>分享到微信群，可获得140</span><img src="../Imgs/score.png" /></div>
+        </div> 
+    </div>
+</body>
+</html>

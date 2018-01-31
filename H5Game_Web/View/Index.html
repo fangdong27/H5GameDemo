@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>首页-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--设置遮罩层-->
+        <div id="hideBg"></div>
+        <div class="fixedTop"></div>
+        <header class="clearFloat gradient">
+            <div class="top" id="header">
+                <span class="title">脑力风暴一测试赛季</span>
+                <span class="mark">
+                    <a href="#" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <section class="infoPanel animationZoomIn">
+                    <span class="share" onclick="javascript: window.location.href = '../View/UserInfo.html'"><img src="../Imgs/shareEWM.png" /></span>
+                    <div class="infoImg animationReduce">
+                        <a href="../View/UserInfo.html">
+                            <span class="uimg"><img src="../Imgs/uimg.jpg" alt="头像" /></span>
+                            <span class="uname">思思</span>
+                        </a>
+                    </div>
+                    <div class="infoLevel animationFadeInUp">
+                        <span class="level">Lv.2<span class="levelProgress"><i style="width:0.2rem;"></i></span></span>
+                        <span class="score"><span class="scoreMark"><img src="../Imgs/score.png" /></span><span class="sNum">1000</span></span>
+                    </div>
+                </section>
+                <section class="gamePanel">
+                    <a href="../View/OrderPanel.html" class="leftPanel"><div class="orderPanel animationLeft">排位赛</div></a>
+                    <a href="../View/ListPanel.html" class="rightPanel"><div class="listPanel animationRight">排行榜</div></a>
+                    <a href="../View/StorePanel.html" class="leftPanel"><div class="storePanle animationLeft">百宝箱</div></a>
+                    <a href="../View/FriendPKPanel.html" class="rightPanel"><div class="friendPKPanel animationRight" style="margin-top:-0.5rem;">好友对战</div></a>
+                    <a href="JavaScript:showMoneyInfo('BankInfoPanel')" class="leftPanel">
+                        <div class="bankPanel animationLeft">
+                            <div class="bankName">钱庄</div>
+                            <!--玩家到3级之后解锁银行功能，可以在一段时间免费领取金币哦。-->
+                            <div class="scoreDiv"><span class="score"><span class="scoreMark"><img src="../Imgs/score.png" /></span><span class="sNum">10/60</span></span></div>
+                            <div class="money"><span class="moneyImg"><img src="../Imgs/money.png" /></span><span id="clock" class="clock"></span></div>
+                        </div>
+                    </a>
+                    <a href="../View/QuestionPanel.html" class="rightPanel"><div class="questionPanel animationRight">题目工厂</div></a>
+                    <a href="../View/KnowledgePanel.html" class="leftPanel"><div class="knowledgePanel animationLeft" style="margin-top: -0.83rem;">知识进化</div></a>
+                    <a href="JavaScript:ShowPanel('SettingPanel')" class="rightPanel"><div class="settingPanel animationRight">设置</div></a>
+                    <a href="../View/WinProPanel.html" class="leftPanel"><div class="winProPanel animationLeft" style="margin-top: -1.02rem;">战利品</div></a>
+                </section>
+            </div>
+            <section id="SettingPanel" class="animationZoomIn">
+                <div style="text-align:center;">
+                    <span class="setImg"><img src="../Imgs/settings.png" /></span>
+                    <span class="close" onclick="ClosePanel('SettingPanel')">X</span>
+                    <div class="setting">设置</div>
+                    <div class="func">推送<span class="message" onclick="CloseFunc('message')"><span class="circle"></span></span></div>
+                    <div class="func">音效<span class="audio" onclick="CloseFunc('audio')"><span class="circle"></span></span></div>
+                </div>
+            </section>
+            <section id="BankInfoPanel" class="animationFadeInUp">
+                <div class="bankResult ">
+                    <div id="getFail">现在还不能领取金币，时间还剩：<span id="bankTimer"></span></div>
+                    <div id="getSuccess">恭喜您成功领取60块金币，快去参与竞赛吧！</div>
+                    <div id="closeBtn" class="closeBtn">确定</div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+<script>
+    getClock();
+</script>

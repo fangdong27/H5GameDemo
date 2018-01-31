@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>对战-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="bgcolor">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">对战</span>
+                <span class="mark">
+                    <a href="../View/Index.html"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <div class="loading lightBlueShadowT animationReduce">脑力风暴</div>
+        <main class="pkPage">
+            <div id="startInfo">
+                <div class="userAInfo userAColor rotateDiv animationZoomInL"><span class="userName">思思</span><span class="pkUserImg"><img src="../Imgs/uimg.jpg" /></span></div>
+                <div class="userBInfo userBColor rotateDiv2 animationZoomInR"><span class="pkUserImg"><img src="../Imgs/u1.jpg" /></span><span class="userName">周易</span></div>
+            </div>
+            <div id="PKInfo">
+                <div class="userAInfo userAColor userL animationLeft">
+                    <span class="pkUserImg"><img src="../Imgs/uimg.jpg" /></span>
+                    <span class="userName" style="margin-right:0.3rem">思思</span>
+                </div>
+                <div id="timer">
+                    <div class="circleProgress_wrapper">
+                        <div class="wrapper right">
+                            <div class="circleProgress rightcircle rotateBox"></div>
+                        </div>
+                        <div class="timer" id="timerText">0</div>
+                        <div class="wrapper left">
+                            <div class="circleProgress leftcircle rotateBox"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="userBInfo userBColor userR animationRight">
+                    <span class="pkUserImg"><img src="../Imgs/u1.jpg" /></span>
+                    <span class="userName" style="margin-left:0.3rem">周易</span>
+                </div>
+                <div id="leftScore">
+                    <span id="lscore" class="lscore">0</span>
+                    <div class="scoreBar blueShadow"><i id="lscoreBar"></i></div>
+                </div>
+                <div id="rightScore">
+                    <span id="rscore" class="rscore">0</span>
+                    <div class="scoreBar blueShadow"><i id="rscoreBar"></i></div>
+                </div>
+                <div id="PKQuestion">
+                    <div class="questionNum"><span id="currentQuesNum">0</span>/12</div>
+                    <div id="QuesContent">
+                        <div class="question">
+
+                        </div>
+                        <div class="answer">
+                            <div class="aDiv">
+                                <span class="answerBg " onclick="submitPKAnswer(this)" id="aA"> </span>
+                            </div>
+                            <div class="aDiv">
+                                <span class="answerBg " onclick="submitPKAnswer(this)" id="aB"> </span>
+                            </div>
+                            <div class="aDiv">
+                                <span class="answerBg" onclick="submitPKAnswer(this)" id="aC"> </span>
+                            </div>
+                            <div class="aDiv">
+                                <span class="answerBg" onclick="submitPKAnswer(this)" id="aD"> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="PKResult">
+                    <div class="userAInfo userAColor userL">
+                        <span class="userName">思思</span>
+                        <span id="rsLscore">0分</span>
+                    </div>
+                    <div class="userBInfo userBColor userR">
+                        <span class="userName">周易</span>
+                        <span id="rsRscore">0分</span>
+                    </div>
+                    <div id="ScoreResult">
+                        <div id="pkSuccess">
+                            <div class="success"><img src="../Imgs/PKSuccess.png" /></div>
+                            <div class="resultText">挑战成功！</div>
+                        </div>
+                        <div id="pkFail">
+                            <div class="fail"><img src="../Imgs/PKFail.png" /></div>
+                            <div class="resultText">挑战失败！</div>
+                        </div>
+                        <div class="winPro">
+                            <div class="winDiv">
+                                <div class="proDetails">
+                                    <span class="scoreMark"><img src="../Imgs/score.png" /></span><span class="sNum">+22</span>
+                                </div>
+                                <div class="splitLine splitLineGradient"></div>
+                                <div class="proDetails">
+                                    <span class="scoreMark"><img src="../Imgs/p4.png" /></span><span class="sNum">+2</span>
+                                </div>
+                                <div class="splitLine splitLineGradient"></div>
+                            </div>
+                            <div class="goOn" onclick="javascript: window.location.href = '../View/OrderPanel.html'">继续挑战</div>
+                            <div class="shareScore">炫耀成绩</div>
+                            <div class="shareText"><span>分享到微信群，可获得20</span><img src="../Imgs/score.png" /></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+<script>
+    //var animationDiv = $("#startInfo");
+    //animationDiv.bind("webkitAnimationEnd", function () {
+    //    setTimeout("showPKInfo()", 1000);
+    //});
+    window.onload = function () {
+        setTimeout("showPKInfo()", 5000);
+    }
+
+</script>

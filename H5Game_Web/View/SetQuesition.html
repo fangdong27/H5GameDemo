@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>我要出题-问答游戏Demo</title>
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <link href="../Css/common.css" rel="stylesheet" />    
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--设置遮罩层-->
+        <div id="hideBg"></div>
+        <header class="bgcolor" id="header">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">我要出题</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main class="setQuesPage">
+            <section class="setQuesDiv">
+                <div onclick="showQuesitionType(this)" class="typeLink animationFadeInDown" id="wk">
+                    <div class="typeImg wkBg"><img src="../Imgs/wk.png" /></div>
+                    <div class="type">文科</div>
+                </div>
+                <div onclick="showQuesitionType(this)" class="typeLink animationFadeInDown" id="lk">
+                    <div class="typeImg lkBg"><img src="../Imgs/lk.png" /></div>
+                    <div class="type">理科</div>
+                </div>
+                <div onclick="showQuesitionType(this)" class="typeLink animationFadeInUp" id="wy">
+                    <div class="typeImg wyBg"><img src="../Imgs/wy.png" /></div>
+                    <div class="type">文艺</div>
+                </div>
+                <div onclick="showQuesitionType(this)" class="typeLink animationFadeInUp" id="lx">
+                    <div class="typeImg lxBg"><img src="../Imgs/lx.png" /></div>
+                    <div class="type">流行</div>
+                </div>
+                <div onclick="showQuesitionType(this)" class="typeLink animationFadeInDown" id="yl">
+                    <div class="typeImg ylBg"><img src="../Imgs/yl.png" /></div>
+                    <div class="type">娱乐</div>
+                </div>
+                <div onclick="showQuesitionType(this)" class="typeLink animationFadeInDown" id="sh">
+                    <div class="typeImg shBg"><img src="../Imgs/sh.png" /></div>
+                    <div class="type">生活</div>
+                </div>
+            </section> 
+        </main>
+        <section id="QuestionType">
+            <div style="text-align:center;" class="animationZoomIn">
+                <span class="setImg"><img src="../Imgs/wk.png" /></span>
+                <span class="close" onclick="ClosePanel('QuestionType')">X</span>
+                <div class="typeWords">设置</div> 
+                <div class="subjectType">
+                    <div class="subDiv lightGrayBoxShadow animationRight" onclick="SetQuestion(this)" >
+                        <span class="subWords">语文</span>
+                        <span class="subImg"></span>
+                    </div>
+                    <div class="subDiv lightGrayBoxShadow animationLeft" onclick="SetQuestion(this)">
+                        <span class="subWords">外语</span>
+                        <span class="subImg"></span>
+                    </div>
+                    <div class="subDiv lightGrayBoxShadow animationRight" onclick="SetQuestion(this)">
+                        <span class="subWords">经济</span>
+                        <span class="subImg"></span>
+                    </div>
+                    <div class="subDiv lightGrayBoxShadow animationLeft" onclick="SetQuestion(this)">
+                        <span class="subWords">历史</span>
+                        <span class="subImg"></span>
+                    </div>
+                    <div class="subDiv lightGrayBoxShadow animationRight" onclick="SetQuestion(this)">
+                        <span class="subWords">军事</span>
+                        <span class="subImg"></span>
+                    </div>
+                </div>
+                 <div class="next" id="next" onclick="javascript: window.location.href = '../View/QuesitionPage.html'">下一步</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

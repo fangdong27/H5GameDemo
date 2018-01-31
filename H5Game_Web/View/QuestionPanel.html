@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>题目工厂-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header class="bgcolor">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">题目工厂</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main class="ques">
+            <div class="qusFactory clearFloat">
+                <a href="../View/SetQuesition.html">
+                    <div class="setQues setQuesBg animationZoomInR">
+                        <div class="setQImg setQuesBg"><img src="../Imgs/setQ.png" /></div>
+                        <span class="underLine"></span>
+                        <span class="quesWords"><span>我要出题</span><label>出题数量：<i>0</i></label></span>
+                    </div>
+                </a> 
+                <a href="../View/MyQuestion.html">
+                    <div class="setQues quesBg animationFadeInDown">
+                        <div class="setQImg quesBg"><img src="../Imgs/myQ.png" /></div>
+                        <span class="underLine"></span>
+                        <span class="quesWords"><span>我的题目</span><label>过审数量：<i>0</i></label></span>
+                    </div>
+                </a>
+                <a href="../View/ExaminingQuestion.html">
+                    <div class="setQues examiningQuesBg animationZoomInL">
+                        <div class="setQImg examiningQuesBg"><img src="../Imgs/examQ.png" /></div>
+                        <span class="underLine"></span>
+                        <span class="quesWords"><span>我要审题</span><label>审核数量：<i>0</i></label></span>
+                    </div>
+                </a> 
+            </div>
+        </main> 
+    </div>
+</body>
+</html>

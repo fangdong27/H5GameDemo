@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>我要出题-问答游戏Demo</title>
+    <link href="../Css/common.css" rel="stylesheet" />
+    <link href="../Css/animation.css" rel="stylesheet" />
+    <script src="../JS/jquery-1.7.2.min.js"></script>
+    <script src="../JS/common.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--设置遮罩层-->
+        <div id="hideBg"></div>
+        <header class="bgcolor" id="header">
+            <div class="top ">
+                <a href="javascript:history.go(-1)"><span class="goBack"></span></a>
+                <span class="title">我要审题</span>
+                <span class="mark">
+                    <a href="../View/Index.html" class="goIndexPage"><i class="other"></i><i class="other otherL"></i><i class="other"></i></a>
+                    <span class="splitLine"></span><i class="close"><i class="other otherL"></i></i>
+                </span>
+            </div>
+        </header>
+        <main class="examPage">
+            <div class="qType animationLeft" id="qType"><span class="mainType">生活</span><span class="splitLine"></span><span class="subType">常识</span></div>
+            <div class="qSkip animationRight" id="qSkip" onclick="loadingNextQ()"><span class="mainType">跳过此题</span><span class="animationPlus"><span class="skipArrow rotateBox "></span><span class="skipArrow rotateBox " style="margin-left:0.04rem;"></span></span></div>
+            <form>
+                <div class="qContent">
+                    <div class="question animationZoomIn">
+                        题目内容题目内容题目内容,题目内容题目内容
+                    </div>
+                    <div class="answer" id="answer">
+                        <div class="aDiv animationFadeInUp"> 
+                            <span class="answerBg " onclick="submitAnswer(this)" id="answerA">答案A</span>
+                        </div>
+                        <div class="aDiv animationRight"> 
+                            <span class="answerBg " onclick="submitAnswer(this)" id="answerB">答案B</span>
+                        </div>
+                        <div class="aDiv animationLeft">                             
+                            <span class="answerBg" onclick="submitAnswer(this)" id="answerC">答案C</span>
+                        </div>
+                        <div class="aDiv animationFadeInDown">                             
+                            <span class="answerBg" onclick="submitAnswer(this)" id="answerD">答案D</span>
+                        </div>
+                    </div> 
+                </div> 
+            </form>
+            <div id="judge" class="judge">
+                <div class="judgeDiv ">
+                    <div class="judgeBtn animationFadeInDown">评价这道题</div>
+                    <div class="judgeQ badQ animationZoomInR" id="badQ" onclick="loadingNextQ()"><span class="judgeBg"><img src="../Imgs/bad.png" /></span><span class="qText">烂题</span></div>
+                    <div class="judgeQ goodQ animationZoomInL" id="goodQ" onclick="loadingNextQ()"><span class="judgeBg"><img src="../Imgs/good.png" /></span><span class="qText">好题</span></div> 
+                </div>
+                <div class="noPass animationRotate" onclick="showReason()">这道题不应该通过审核</div>
+            </div>
+            <div class="tips">*所审题目均来自玩家，仅代表玩家个人意愿，请慎重选择！</div>
+        </main>
+        <section id="reason" >
+            <div class="rTop animationFadeInUp">哪里有问题？</div>
+            <div class="reason animationRight" onclick="loadingNextQ()">题目答案有误</div>
+            <div class="reason animationFadeInDown" onclick="loadingNextQ()">题目类别有误</div>
+            <div class="reason animationLeft" onclick="loadingNextQ()">题目中有错别字</div>
+            <div class="reason animationFadeInDown" onclick="loadingNextQ()">题目重复了</div>
+            <div class="reason animationRight" onclick="loadingNextQ()">题目不明确</div>
+            <div class="reason animationFadeInUp" onclick="loadingNextQ()">题目不够严谨</div>
+            <div class="reason animationLeft" onclick="loadingNextQ()">其他</div>
+        </section>
+    </div>
+</body>
+</html>
