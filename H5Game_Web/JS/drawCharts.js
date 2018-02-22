@@ -18,8 +18,8 @@ function DrawRadarEChart(ec) {
     custSource.setOption({
         tooltip: {//鼠标悬浮交互时的信息提示
             //触发类型，默认数据触发，可选：'item'和'axis'
-            trigger: 'item',
-            formatter: "{a}:{b}"//力导向图formatter:a(系列名称)，b(节点名称)
+            trigger: 'axis'//,
+            //formatter: "{a}:{b}"//力导向图formatter:a(系列名称)，b(节点名称)
         },
         //legend: {//图例
         //    textStyle: {
@@ -139,8 +139,8 @@ function DrawRadarUserEChart(ec) {
     custSource.setOption({
         tooltip: {//鼠标悬浮交互时的信息提示
             //触发类型，默认数据触发，可选：'item'和'axis'
-            trigger: 'item',
-            formatter: "{a}:{b}"//力导向图formatter:a(系列名称)，b(节点名称)
+            trigger: 'axis'//,
+            //formatter: "{a}:{b}"//力导向图formatter:a(系列名称)，b(节点名称)
         },
          
         calculable: true,//是否启用拖拽重计算特性，默认关闭
@@ -197,7 +197,9 @@ function DrawRadarUserEChart(ec) {
                 },
                 data: [
                      {
-                       value: [34, 58, 60, 76, 56, 69], itemStyle: {
+                         value: [34, 58, 60, 76, 56, 69],
+                         name:"个人技能",
+                         itemStyle: {
                              normal: {
                                  areaStyle: {
                                      type: 'default',
